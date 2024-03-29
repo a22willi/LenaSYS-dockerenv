@@ -27,7 +27,7 @@ COPY init.sh /usr/local/bin/init.sh
 RUN chmod +x /usr/local/bin/init.sh
 
 # Set the script as the entrypoint
-ENTRYPOINT ["/usr/local/bin/init.sh"]
+ENTRYPOINT [ "/usr/local/bin/init.sh" ]
 
 # Default command
-CMD ["apache2-foreground"]
+CMD [ "apache2-foreground" ]
