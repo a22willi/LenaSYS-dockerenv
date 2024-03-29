@@ -16,6 +16,15 @@ RUN { \
         echo 'post_max_size=128M'; \
     } > /usr/local/etc/php/conf.d/uploads.ini
 
+# Enable Apache Directory Listing
+RUN a2enmod autoindex
+RUN echo '<Directory /var/www/html>' > /etc/apache2/conf-available/custom-directory-listing.conf \
+    && echo '    Options Indexes FollowSymLinks' >> /etc/apache2/conf-available/custom-directory-listing.conf \
+    && echo '    AllowOverride None' >> /etc/apache2/conf-available/custom-directory-listing.conf \
+    && echo '    Require all granted' >> /etc/apache2/conf-available/custom-directory-listing.conf \
+    && echo '</Directory>' >> /etc/apache2/conf-available/custom-directory-listing.conf \
+    && a2enconf custom-directory-listing
+
 RUN mkdir -p /var/www/html/temp && \
     chown www-data:www-data /var/www/html/temp && \
     git clone https://github.com/HGustavs/LenaSYS.git /var/www/html/temp
