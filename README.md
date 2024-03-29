@@ -23,6 +23,10 @@ In order to use this project you need to install:
 
     Navigate to [LenaSYS/install/install.php](http://localhost/LenaSYS/install/install.php) and run the installer. The first page should have its information preselected. When asked for a database root password, simply write `password`.
 
+4. Running Linux?
+
+    Since the LenaSYS repository needs to remain under the ownership of the `www-data` user, you may lack permission to modify the files. To gain access, run the command chmod `777 -R LenaSYS`. This will allow any user to modify the files. However, Git will see modified file permissions as changes. To prevent this, run `git config core.fileMode false`.
+
 ## Current limitations
 
 Due to current limitations with the installer, the MySQL-user is limited to connect from the same hostname as previoulsy specified. This does not work for docker installations such as this one. See [issue-#14281](https://github.com/HGustavs/LenaSYS/issues/14281).
