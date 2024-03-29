@@ -25,7 +25,7 @@ In order to use this project you need to install:
 
 4. Running Linux?
 
-    Since the LenaSYS repository needs to remain under the ownership of the `www-data` user, you may lack permission to modify the files. To gain access, run the command chmod `777 -R LenaSYS`. This will allow any user to modify the files. However, Git will see modified file permissions as changes. To prevent this, run `git config core.fileMode false`.
+    Since the LenaSYS repository needs to remain under the ownership of the `www-data` user, you may lack permission to modify the files. To gain access, run the command `chmod 777 -R LenaSYS`. This will allow any user to modify the files. However, Git will see modified file permissions as changes. To prevent this, run `git config core.fileMode false`.
 
 ## Current limitations
 
