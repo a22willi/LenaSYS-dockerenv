@@ -25,9 +25,9 @@ RUN echo '<Directory /var/www/html>' > /etc/apache2/conf-available/custom-direct
     && echo '</Directory>' >> /etc/apache2/conf-available/custom-directory-listing.conf \
     && a2enconf custom-directory-listing
 
-RUN mkdir -p /var/www/html/temp && \
-    chown www-data:www-data /var/www/html/temp && \
-    git clone https://github.com/HGustavs/LenaSYS.git /var/www/html/temp
+RUN mkdir -p /var/www/temp && \
+    chown www-data:www-data /var/www/temp && \
+    git clone https://github.com/HGustavs/LenaSYS.git /var/www/temp
 
 # Copy the initialization script
 COPY init.sh /usr/local/bin/init.sh

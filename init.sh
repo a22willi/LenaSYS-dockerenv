@@ -2,7 +2,7 @@
 
 # Path to the directory where the repository should be
 REPO_PATH="/var/www/html/LenaSYS"
-TEMP_PATH="/var/www/html/temp/*"
+TEMP_PATH="/var/www/temp/*"
 
 # Check if the directory is empty
 if [ ! "$(ls -A $REPO_PATH)" ]; then
