@@ -6,7 +6,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - "../www:/var/www/"
+      - "./LenaSYS:/var/www/html/LenaSYS"
+      - "./coursesyspw.php:/var/www/html/coursesyspw.php"
     restart: no
   db:
     image: mysql:5.7.42
