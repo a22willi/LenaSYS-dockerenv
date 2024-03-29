@@ -8,6 +8,7 @@ services:
     volumes:
       - "./LenaSYS:/var/www/html/LenaSYS"
       - "./coursesyspw.php:/var/www/html/coursesyspw.php"
+      - "./githubMetadata:/var/www/html/githubMetadata"
     restart: no
   db:
     image: mysql:5.7.42

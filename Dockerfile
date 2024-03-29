@@ -20,8 +20,6 @@ RUN mkdir -p /var/www/html/temp && \
     chown www-data:www-data /var/www/html/temp && \
     git clone https://github.com/HGustavs/LenaSYS.git /var/www/html/temp
 
-RUN mkdir -p /var/www/html/githubMetadata
-
 # Copy the initialization script
 COPY init.sh /usr/local/bin/init.sh
 
